@@ -1,0 +1,319 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hidden checkbox to control menu */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Hamburger icon */
+    .menu-icon {
+      font-size: 30px;
+      padding: 15px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 15px;
+      z-index: 1100;
+       color: #fff6f6;
+    }
+
+    /* Overlay */
+    .menu-overlay {
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(65, 101, 74, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in-out;
+      z-index: 1000;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .menu-overlay {
+      transform: translateX(0);
+    }
+
+    .menu-overlay a {
+      color: rgb(255, 255, 255);
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 15px 0;
+      transition: color 0.3s;
+    }
+
+    .menu-overlay a:hover {
+      color: rgb(1, 33, 10);
+    }
+
+    .menu-overlay a.active {
+      color: rgb(112, 94, 94);
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  
+
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      /* background: linear-gradient(120deg, #047939, #196719, #3cff42); */
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      padding: 40px;
+      width: 90%;
+      max-width: 600px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .tab-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 3px solid white;
+      cursor: pointer;
+      color: #eee;
+    }
+
+    .tab.active {
+      border-color: #d2a795e9;
+      color: #0b0400;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row > div {
+      flex: 1;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .next-button button {
+      background-color: white;
+      color: #000;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+
+    .containerss {
+  background-image: url('image-asset.webp'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 600px;
+  height: 400px;
+  padding: 30px 40px;
+  box-sizing: content-box;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.button-groupss {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnss {
+  padding: 10px 20px;
+  background-color: #00cc66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3
+}
+
+.btnss:hover {
+  background-color: #165434;
+}
+
+ .newsletter-section {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.newsletter-section input {
+  padding: 10px;
+  width: 250px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter-section button {
+  padding: 10px 20px;
+  background-color: #38b000;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+.bodyss {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .about-header {
+      background: #f9c89b;
+      padding: 40px 20px 20px 20px;
+      color: #005c49;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .about-content {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .about-content h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .about-content p {
+      line-height: 1.6;
+    }
+    .about-content a {
+      color: #00796b;
+      text-decoration: underline;
+    }
+    .accordion {
+      margin-top: 30px;
+    }
+    .accordion button {
+      width: 100%;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #bfae8f;
+      text-align: left;
+      font-size: 1.2em;
+      padding: 15px;
+      cursor: pointer;
+      color: #004d40;
+    }
+
+    .footer-section,
+.footer-social,
+.footer-bottom {
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  font-size: 0.9em;
+  color: #555;
+}
+.bighero {
+  background: #e0f2e0;
+  color: #333;
+  padding: 30px 20px;
+  font-family: 'Arial', sans-serif;
+
+background-color: #e0f2e9;
+  padding: 30px 20px;
+  color: #333;
+
+}
+     

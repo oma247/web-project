@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background: linear-gradient(to right, #077827, #84ac80);">
+  <div class="form-container">
+    <h1 style="font-weight: 800; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Client Intake Form</h1>
+
+    <div class="tab-navigation">
+      <div class="tab active" style="text-align: center;">CLIENT DETAILS</div>
+    </div>
+
+    <form autocomplete="on">
+      <div class="row">
+        <div>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      </div>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <Label for="Password">Password</Label>
+      <input type="text" id="password" name="password" required> 
+
+      <label for="Confirm password">Confirm Password</label>
+      <input type="text" id="confirmpassword" name="confirmpassword" required>
+
+      <label for="address1">Street Address</label>
+      <input type="text" id="address1" name="address1" required>
+
+      <label for="address2">Address Line 2</label>
+      <input type="text" id="address2" name="address2">
+
+      <div class="row">
+        <div>
+          <label for="city">City</label>
+          <select id="city" name="city">
+            <option value="city">Select option</option required>
+            <option value="Lagos Island">Lagos Island</option>
+            <option value="Victoria Island">Victoria Island</option>
+            <option value="lekki">Lekki</option>
+            <option value="Surulere">Surulere</option>
+            <option value="Badagry">Badagry</option>
+            <option value="Apapa">Apapa</option>
+            <option value="Mushin">Mushin</option>
+          
+          </select><br><br>
+        </div>
+        <div>
+          <label for="state">State/Region/Province</label>
+          <select id="city" name="city" size="1">
+            <option value="Lagos Island">Lagos Island</option>
+            <option value="Victoria Island">Victoria Island</option>
+            <option value="lekki">Lekki</option>
+            <option value="Surulere">Surulere</option>
+            <option value="Badagry">Badagry</option>
+            <option value="Apapa">Apapa</option>
+            <option value="Mushin">Mushin</option>
+            <option value="fia"></option>
+        
+          </select><br><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="zip">Postal / Zip Code</label>
+          <input type="text" id="zip" name="zip">
+        </div>
+        <div>
+          <label for="country">Country</label>
+         <select id="country" name="country">
+            <option value="Nigeria">Nigeria</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Ghana">Ghana</option>
+
+
+            <!-- Add more countries if needed -->
+          </select><br><br>
+
+</body>
+</html>
