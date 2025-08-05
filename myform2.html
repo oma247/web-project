@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myform2</title>
+</head>
+<body>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #077827, #84ac80);
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.address, .metrics {
+  display: flex;
+  gap: 10px;
+}
+
+.address input, .metrics input {
+  flex: 1;
+}
+
+button {
+  background: #c3f5d0;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #a2e3b5;
+}
+progress {
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+}
+</style>
+
+<div class="form-container">
+      <h1 style="text-align: center;">Secondary Information</h1>
+
+      <h3>Medical History</h3>
+      <p>Do you have any health conditions?</p>
+      <label><input type="radio" name="condition" required />Yes</label>
+      <label><input type="radio" name="condition" required />No</label>
+      <textarea placeholder="State or explain the health condition"></textarea>
+
+      <h3>Current Medication</h3>
+      <textarea placeholder="State the current Medication"></textarea>
+
+      <p>Any surgical history?</p>
+      <label><input type="radio" name="surgery" required />Yes</label>
+      <label><input type="radio" name="surgery" required />No</label>
+
+  <label for="allergies">Allergies (medications, foods, environmental)</label>
+  <textarea id="allergies" name="allergies"></textarea>
+
+  <label for="medications">Current Medications</label>
+  <textarea id="medications" name="medications"></textarea>
+
+  <label for="medical-history">Past Medical History</label>
+  <textarea id="medical-history" name="medical-history" placeholder="Chronic illnesses, surgeries, etc."></textarea>
+
+  <label for="family-history">Family Medical History</label>
+  <textarea id="family-history" name="family-history"></textarea>
+
+  <label>Lifestyle</label>
+  <div class="row">
+    <select name="smoking">
+      <option value="" disabled selected>Smoking</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Former smoker</option>
+    </select>
+    <select name="alcohol">
+
+      <div class="metrics"><p>Dimensions</p>
+        <input type="text" placeholder="Height" required/>
+        <input type="text" placeholder="Weight" required/>
+      </div>
+      <option value="" disabled selected>Alcohol</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Occasionally</option>
+    </select>
+
+  <label for="symptoms">Reason for Visit</label>
+  <textarea id="symptoms" name="symptoms"></textarea>
+
+  <label>
+    <input type="checkbox" name="consent" required />I consent to treatment and acknowledge the privacy policy.</label>
+
+  <label for="referral">How did you hear about us?</label>
+  <input type="text" id="referral" name="referral" />
+
+  <button type="submit" ><a href="home.html">Submit</a></button>
+
+</div>
+
+</body>
+</html>

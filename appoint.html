@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>massage form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(massage\ background.jpg); /* light green background */
+    }
+
+    .form-container {
+      max-width: 600px;
+      background: rgb(97, 143, 101);
+      padding: 40px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container img {
+      width: 60px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .form-container p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .mylabele {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .name-fields {
+      display: flex;
+      gap: 10px;
+    }
+
+    .name-fields input {
+      flex: 1;
+    }
+
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #158989;
+    }
+  </style>
+
+
+  <div class="form-container">
+
+    <h2>Massage Therapy Form</h2>
+
+    <form><br><br><br>
+      <label for="form">Massage Therapy Form</label><h2>Massage Therapy Form</h2>
+      <label class="mylabele">Name <span class="required">*</span></label>
+      <div class="name-fields">
+        <input type="text" placeholder="First" required>
+        <input type="text" placeholder="Last" required>
+      </div>
+
+      <label">Email Address <span class="required">*</span></label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label">What type massage do you want? <span class="required">*</span></label>
+      <select required>
+        <option value="">Please select</option>
+        <option value="Swedish">Swedish Massage</option>
+        <option value="Deep Tissue">Deep Tissue</option>
+        <option value="Prenatal">Sports Massage</option>
+        <option value="Hot Stone">Hot Stone Massage</option>
+      </select>
+
+  
+
+
+ 
+
+  <!-- Existing Payment Method dropdown -->
+  <label for="paymentMethod">Payment Method *</label>
+  <select id="paymentMethod" name="paymentMethod" onchange="showBankDetails()">
+    <option value="">Choose method</option>
+    <option value="cash">Cash</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <!-- Hidden Bank Details Section -->
+  <div id="bankDetails" class="hidden">
+    <p><strong>Bank Name:</strong> Zenith Bank</p>
+    <p><strong>Account Name:</strong> Bellwether Nature Cure</p>
+    <p><strong>Account Number:</strong> 2234567890</p><br><br><br><br>
+    <p>Upload Payment Evidence</p>
+
+    <label for="paymentProof">Upload Payment Evidence *</label>
+    <input type="file" id="paymentProof" name="paymentProof" accept="image/*,.pdf" required>
+  </div>
+
+</form> 
+
+
+<style>
+.hidden {
+  display: none;
+}
+
+#bankDetails {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0fff0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+</style>
+<script>
+function showBankDetails() {
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const bankSection = document.getElementById("bankDetails");
+    
+    if (paymentMethod === "bank") {
+      bankSection.classList.remove("hidden");
+    } else {
+      bankSection.classList.add("hidden");
+    }
+  }
+</script>
+
+
+   
+
+
+      <label">In which of locations? <span class="required">*</span></label>
+      <select required>
+        <option value="">Please select</option>
+        <option value="Home Service">Kumasi</option>
+        <option value="Lagos">Lagos</option>
+        <option value="Abuja">Abuja</option>
+        <option value="Port Harcourt">Port Harcourt</option>
+      </select>
+
+
+
+      <label">At what date and time? <span class="required">*</span></label>
+      <input type="datetime-local" required>
+
+     <button type="submit" ><a href="congrats.html">Submit</a></button>
+    </form>
+  </div>
+
+
+
+
+  
+
+
+</body>
+</html>
