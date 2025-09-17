@@ -122,13 +122,37 @@ progress {
   <textarea id="symptoms" name="symptoms"></textarea>
 
   <label>
-    <input type="checkbox" name="consent" required />I consent to treatment and acknowledge the privacy policy.</label>
+    <input type="checkbox"name="consent"required />I consent to treatment and acknowledge the privacy policy.</label>
 
-  <label for="referral">How did you hear about us?</label>
-  <input type="text" id="referral" name="referral" />
+  <!-- <label for="referral">How did you hear about us?</label>
+  <input type="text" id="referral" name="referral" /> -->
+<!-- 
+  <button type="submit" ><a href="home.html">Submit</a></button> -->
+<form onsubmit="handleLogin(event)">
+  <input type="text" id="username" placeholder="Username" required />
+  <input type="email" id="email" placeholder="Email" required />
+  <button type="submit">Login</button>
+</form>
 
-  <button type="submit" ><a href="home.html">Submit</a></button>
+<script>
+  function handleLogin(e) {
+    e.preventDefault();
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    localStorage.setItem("userName", username);
+    localStorage.setItem("userEmail", email);
+    window.location.href = "home.html";
+  }
+</script>
 
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      localStorage.setItem("loggedInUser", username);
+      window.location.href = "home.html";
+    });
+  </script>
 </div>
 
 </body>

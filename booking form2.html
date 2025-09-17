@@ -6,9 +6,6 @@
     <title>Book Appointment | Bellwether Clinic</title>
 </head>
 <body>
-
-
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -66,13 +63,37 @@
     button:hover {
         background-color: #1e3e1d;
     }
-  </style>
+      
+.hidden {
+  display: none;
+}
+    #bankDetails {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0fff0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+</style>
+<script>
+function showBankDetails() {
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const bankSection = document.getElementById("bankDetails");
+    
+    if (paymentMethod === "bank") {
+      bankSection.classList.remove("hidden");
+    } else {
+      bankSection.classList.add("hidden");
+    }
+  }
+</script>
 </head>
 <body>
 
   <div class="form-container">
     <h2>Book A Massage</h2>
-    <form action="thanks.html" method="GET">
+    <form action="thanks.html" method="GET"
+    onsubmit="saveBooking(event)">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required />
 
@@ -89,7 +110,38 @@
         <option value="consultation">Swedish Massage</option>
         <option value="massage">Sports Massage</option>
         <option value="detox"></option>
+
+        <form onsubmit="saveBooking(event)">
+  <select id="massageType" required>
+    <option value="">Select Massage Type</option>
+    <option value="Swedish">Swedish</option>
+    <option value="Deep Tissue">Deep Tissue</option>
+    <option value="Sports">Sports</option>
+  </select>
+  <input type="date" id="appointmentDate" required>
+  <input type="time" id="appointmentTime" required>
+  <button type="submit">Book Appointment</button>
+</form>
       </select>
+
+            <!-- Existing Payment Method dropdown -->
+  <label for="paymentMethod">Payment Method *</label>
+  <select id="paymentMethod" name="paymentMethod" onchange="showBankDetails()">
+    <option value="">Choose method</option>
+    <option value="cash">Cash</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <!-- Hidden Bank Details Section -->
+  <div id="bankDetails" class="hidden">
+    <p><strong>Bank Name:</strong> Zenith Bank</p>
+    <p><strong>Account Name:</strong> Bellwether Nature Cure Clinic</p>
+    <p><strong>Account Number:</strong> 2234567890</p><br><br><br><br>
+    <p>Upload Payment Evidence</p>
+
+    <label for="paymentProof">Upload Payment Evidence *</label>
+    <input type="file" id="paymentProof" name="paymentProof" accept="image/*,.pdf" required>
+  </div>
 
       <label for="date">Preferred Date</label>
       <input type="date" id="date" name="date" required />

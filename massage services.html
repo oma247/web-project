@@ -6,7 +6,38 @@
     <title>Massage Therapy | Bellwether Clinic</title>
 </head>
 <body>
+<style>
+    /* Navbar container */
+    .navbar {
+      background-color: #0b3202;
+      overflow: hidden;
+    }
 
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our servicess.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
   <section class="massage-container">
     <h1>Massage Therapy</h1>
     <p class="intro">At Bellwether Naturecure Clinic, we offer tailored massage therapies designed to promote relaxation, relieve tension, and support your holistic well-being.</p>
@@ -20,17 +51,17 @@
       <div class="therapy-item">
         <h3>Swedish Massage</h3>
         <p>Gentle and relaxing full-body therapy to reduce stress.</p><br><br>
-        <a href="deeptissues.html" class="book-btn">Read More</a> 
+        <a href="swedish.html" class="book-btn">Read More</a> 
       </div>
       <div class="therapy-item">
         <h3>Sports Massage</h3>
         <p>Improves performance and recovery for active individuals.</p><br>
-        <a href="deeptissues.html" class="book-btn">Read More</a> 
+        <a href="sport.html" class="book-btn">Read More</a> 
       </div>
       <div class="therapy-item">
         <h3>Prenatal Massage</h3>
         <p>Safe and soothing relief during all pregnancy stages.</p><br><br>
-        <a href="deeptissues.html" class="book-btn">Read More</a> 
+        <a href="prenatal.html" class="book-btn">Read More</a> 
       </div>
     </div><br><br>
 
@@ -60,14 +91,14 @@
       <td>₦25,000</td>
     </tr>
     <tr>
-      <td>Hot Stone Massage</td>
+      <td>Prenatal Massage</td>
       <td>30 mins</td>
       <td>₦20,000</td>
     </tr>
   </tbody>
 </table><br><br>
 <div class="booking-section"><p>Ready to relax and rejuvenate?</p><br>
-      <a href="booking form2.html" class="book-btn">Book Now</a> <a href="our servicess.html" class="book-btn">Go Back</a></div>
+      <a href="book.html" class="book-btn">Book Now</a> <a href="our servicess.html" class="book-btn">Go Back</a></div>
     </div>
  </section>
 <style>
@@ -119,6 +150,7 @@ h1 {
 .booking-section {
   text-align: center;
   margin-top: 40px;
+ 
 }
 
 .book-btn {
@@ -128,7 +160,7 @@ h1 {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition:  0.3s;
 }
 
 .book-btn:hover {
@@ -156,11 +188,36 @@ h1 {
 .custom-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+     footer {
+      background: #4a7c59;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
 </style>
 
+  <a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
 
-
-
+  <footer>
+    &copy; 2025 Bellwether Nature Cure Clinic | Rooted in Nature, Guided by Knowledge
+  </footer>
 </body>
 </html>

@@ -7,8 +7,6 @@
 </head>
 <body>
 
-
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -66,7 +64,31 @@
     button:hover {
         background-color: #1e3e1d;
     }
-  </style>
+  
+.hidden {
+  display: none;
+}
+
+#bankDetails {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0fff0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+</style>
+<script>
+function showBankDetails() {
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const bankSection = document.getElementById("bankDetails");
+    
+    if (paymentMethod === "bank") {
+      bankSection.classList.remove("hidden");
+    } else {
+      bankSection.classList.add("hidden");
+    }
+  }
+</script>
 </head>
 <body>
 
@@ -87,9 +109,34 @@
         <option value="">-- Choose a Service --</option>
         <option value="iridology">Iridology Diagnostics</option>
         <option value="consultation">Alternative Medicine Consultation</option>
-        <option value="massage">Massage Therapy</option>
-        <option value="detox">Detox & Stress Relief</option>
+        <option value="emotion">Emotional Detox & Stress Relief</option>
+        <option value="detox">Fertility And Reproductive Health</option>
+        <option value="detox">Nutrition And Herbal Therapy Plans</option>
+        <option value="detox">Immune Boosting Herbal Treatments</option>
+        <option value="weight">Weight Management Programs</option>
+        <option value="diabetes">Diabetes and Blood sugar Control Programs</option>
+        <option value="beauty">Skin And Beauty Herbal Treatments</option>
       </select>
+
+      <!-- Existing Payment Method dropdown -->
+  <label for="paymentMethod">Payment Method *</label>
+  <select id="paymentMethod" name="paymentMethod" onchange="showBankDetails()">
+    <option value="">Choose method</option>
+    <option value="cash">Cash</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <!-- Hidden Bank Details Section -->
+  <div id="bankDetails" class="hidden">
+    <p><strong>Bank Name:</strong> Zenith Bank</p>
+    <p><strong>Account Name:</strong> Bellwether Nature Cure Clinic</p>
+    <p><strong>Account Number:</strong> 2234567890</p><br><br><br><br>
+    <p>Upload Payment Evidence</p>
+
+    <label for="paymentProof">Upload Payment Evidence *</label>
+    <input type="file" id="paymentProof" name="paymentProof" accept="image/*,.pdf" required>
+  </div>
+
 
       <label for="date">Preferred Date</label>
       <input type="date" id="date" name="date" required />

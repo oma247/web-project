@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Medicine 101</title>
+</head>
+<body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    header {
+      background:  #006644;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #003300;
+    }
+    .quiz {
+      margin-top: 20px;
+    }
+    .quiz label {
+      display: block;
+      margin: 10px 0;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #006644;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Herbal Medicine 101</h1>
+    <p>Introduction to Natural Healing</p>
+  </header>
+
+  <section><h2>What is Herbal Medicine?</h2>
+    <p>
+      Herbal medicine is the use of plants to treat and prevent illnesses. It has been used for centuries in various cultures worldwide.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common Herbs and Uses</h2>
+    <ul>
+      <li><strong>Ginger:</strong> Aids digestion and reduces nausea.</li>
+      <li><strong>Turmeric:</strong> Anti-inflammatory and antioxidant.</li>
+      <li><strong>Peppermint:</strong> Helps with indigestion and headaches.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Safety Tips</h2>
+    <p>
+      Always consult with a healthcare professional before starting any herbal treatments. Some herbs may interact with medications or cause allergic reactions.
+    </p>
+  </section>
+
+  <section class="quiz">
+    <h2>Quick Quiz</h2>
+    <form id="quizForm">
+      <label>1. What is ginger commonly used for?</label>
+      <input type="radio" name="q1" value="wrong"> Cure headaches<br>
+      <input type="radio" name="q1" value="correct"> Aid digestion<br>
+      <input type="radio" name="q1" value="wrong"> Boost sleep<br>
+
+      <label>2. Which herb is known for anti-inflammatory properties?</label>
+      <input type="radio" name="q2" value="wrong"> Mint<br>
+      <input type="radio" name="q2" value="correct"> Turmeric<br><input type="radio" name="q2" value="wrong"> Lavender<br>
+
+      <button type="button" onclick="checkQuiz()" id="result"></button>
+    </form>
+    <div id="result"></div>
+
+
+  <script>
+    function checkQuiz() {
+      const answers = document.forms["quizForm"];
+      let score = 0;
+
+      if (answers.q1.value === "correct") score++;
+      if (answers.q2.value === "correct") score++;
+
+      document.getElementById("result").innerText = 'You scored ${score}/2';
+    }
+      function checkQuiz(event) {
+    event.preventDefault(); // Prevent form from submitting
+    const answers = document.forms["quizForm"];
+    let score = 0;
+
+    if (answers.q1.value === "correct") score++;
+    if (answers.q2.value === "correct") score++;
+
+    document.getElementById("result").innerText = `You scored ${score}/2`;
+  }
+  </script>
+
+
+<form name="quizForm" onsubmit="checkQuiz(event)">
+  <!-- <p>1. What is a medicinal herb?</p>
+  <input type="radio" name="q1" value="wrong">A fruit<br>
+  <input type="radio" name="q1" value="correct">A plant used for healing<br>
+
+  <p>2. Which part of the plant is often used in herbal medicine?</p>
+  <input type="radio" name="q2" value="correct">Leaves<br>
+  <input type="radio" name="q2" value="wrong">Rocks<br> -->
+
+  <button type="submit" id="result">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+  function checkQuiz(event) {
+    event.preventDefault(); // Prevent form from submitting
+    const answers = document.forms["quizForm"];
+    let score = 0;
+
+    if (answers.q1.value === "correct") score++;
+    if (answers.q2.value === "correct") score++;
+
+    document.getElementById("result").innerText = `You scored ${score}/2`;
+  }
+</script>
+ <a href="1comp.html" style="margin-top: 10px; padding: 8px 15px;background: #003300;color: white; border: none; border-radius: 4px;cursor: pointer;">Continue >>>></a>
+ </section>
+<a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
+</body>
+</html>

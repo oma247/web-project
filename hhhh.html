@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Starting JavaScript Programming</h2>
+    <p>Course Assessment <span id="progress">0%</span></p>
+    <div class="question">
+      <p>Detoxification is the process of ________toxins from the body to improve health and wellness.</p>
+      <input type="text" id="answerInput" placeholder="Type your answer..." />
+    </div>
+    <button onclick="submitAnswer()">Submit</button>
+    <div id="feedback"></div>
+  </div>
+
+</body>
+</html>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #004d66;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #006080;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+}
+</style>
+
+<script>
+function submitAnswer() {
+  const input = document.getElementById("answerInput").value.trim().toLowerCase();
+  const correctAnswer = "eliminating";
+
+  if (input === correctAnswer) {
+    localStorage.setItem("quizScore", 100);
+    document.getElementById("feedback").innerText = "Correct!";
+    document.getElementById("progress").innerText = "100%";
+  } else {
+    localStorage.setItem("quizScore", 0);
+    document.getElementById("feedback").innerText = "Incorrect. Try again.";
+    document.getElementById("progress").innerText = "0%";
+  }
+}
+
+// Optional: Load progress if previously stored
+window.onload = () => {
+  const savedScore = localStorage.getItem("quizScore");
+  if (savedScore) {
+    document.getElementById("progress").innerText = savedScore + "%";
+  }
+};
+</script>

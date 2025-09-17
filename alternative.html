@@ -61,11 +61,61 @@
     .btn:hover {
       background-color: #2b5529;
     }
+        /* Navbar container */
+    .navbar {
+      background-color: #0b3202;
+      overflow: hidden;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+     footer {
+      background: #4a7c59;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
   </style>
 </head>
 <body>
+
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our servicess.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
   <div class="container">
-    <h1><i class="fas fa-leaf icon"></i>Alternative Medicine Consultations</h1>
+    <h1><i class="fas fa-leaf icon"></i>Alternative Medicine / General Consultations</h1>
     <img src="Wha.jpg" >
     
     <p><i class="fas fa-user-md icon"></i> Personalized holistic consultations tailored to your body and lifestyle.</p>
@@ -91,7 +141,13 @@
     </p>
    <div style="text-align: center;"><a href="booking form.html" class="btn"><i class="fas fa-calendar-check"></i> Book a Consultation</a>                         <a href="our servicess.html" class="btn">Go Back</a></div>
   </div>
+
+  <a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
+     <footer>
+    &copy; 2025 Bellwether Naturecure Clinic. All rights reserved.
+  </footer>
 </body>
 </html>
-</body>
-</html>
+

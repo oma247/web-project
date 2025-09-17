@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
   <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
 
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our servicess.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div><br><br>
 <style>
   .newsletter-section {
   background-color: #006d77;
@@ -173,11 +181,57 @@ background-color: #e0f2e9;
   font-weight: bold;
   text-align: center;
 }
+ footer {
+      background: #4a7c59;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    
+    /* Navbar container */
+    .navbar {
+      background-color: #0b3202;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
     </style>
 </head>
 
 <body >
-  <a href="top"></a>
+
 
   <div class="about-header">About us</div>
 
@@ -234,7 +288,7 @@ background-color: #e0f2e9;
   <p>Sign up to receive the very latest in herbal and wellness insights.</p>
   <form>
     <input type="email" placeholder="Email address" required>
-    <button type="submit">subscribe</button>
+    <button type="submit"  onclick="alert('Successfully subscribed!')">subscribe</button>
   </form>
 </section>
 
@@ -257,34 +311,13 @@ We envision a future where alternative medicine is not seen as a last resort, bu
   <p>Alternative Medicine or comparative medicine are practice of plant medicine that are documented and proven. Just like orthodox medicine, it is scientifically proven and documented . It is the use of plants and non plants to cure ailments. Alternative medicine encompasses a variety of healing practices outside of conventional Western medicine, often emphasizing a holistic approach to health and well-being. Its importance lies in its potential to address health concerns in ways that conventional medicine might not, including offering reduced side effects, personalized care, and a sense of empowerment. It can also be more accessible, affordable, and culturally relevant for some individuals. Alternative medicine is mainly about shifting the focus from orthodox medicine and embracing the healing power of nature. </p>
 </section>
  
+<a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
 
-
-<footer class="bighero">
-  <div class="footer-section">
- 
-    <ul>
-      <li><a href="home.html" target="_blank" style="color: rgb(32, 65, 33);">HOME</a></li><br>
-      <li><a href="about.html" target="_blank" style="color: rgb(32, 65, 33);">ABOUT US</a></li><br>
-      <li><a href="our services.html" target="_blank" style="color: rgb(32, 65, 33);">OUR SERVICE</a></li><br>
-  
-    </ul>
-  </div>
-
-  <div class="footer-social">
-  
-  </div>
-
-  <div class="footer-bottom">
-    <div style="text-align: center; text-decoration: none;"><a href="https://wa.me/2349121322728" target="_blank" class="whatsapp-btn">Chat on WhatsApp for more enquires and informations</a></div>
-    <p style="text-align: center;">© 2025 Bellwether Clinic. All Rights Reserved.</p>
-  </div>
-  <div><a href="#top" style="color: #151515; ">Back to top</a></div>
-</footer>
-
-
-
-
-
+   <footer>
+    &copy; 2025 Bellwether Naturecure Clinic. All rights reserved.
+  </footer>
 
 </body>
 </html>

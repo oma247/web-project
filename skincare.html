@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Natural Skincare Formulations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fdf9;
+    }
+
+    header {
+      background-color: #397a57;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background-color: white;
+    }
+
+    h2 {
+      color: #397a57;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .quiz {
+      background: #f0f9f3;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: #397a57;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {margin-top: 15px;
+      font-weight: bold;
+      color: #397a57;
+    }
+        /* Navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+        .navbar {
+      background-color: #0b3202;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our servicess.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <header>
+    <h1>Natural Skincare Formulations</h1>
+    <p>Learn to create safe, effective, and natural skincare products using herbs and essential oils.</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>What is Natural Skincare?</h2>
+      <p>Natural skincare uses plant-based, non-toxic ingredients to promote healthy skin without synthetic chemicals. It focuses on nourishing the skin, supporting its natural function, and avoiding irritation.</p>
+   <div style="display: flex; gap: 10px;">
+  <img src="pro.jpg" alt="Image 1" style="width: 300px; height: auto;">
+  <img src="seek.jpg" alt="Image 2" style="width: 300px; height: auto;">
+    <img src="vera.webp" alt="Image 2" style="width: 300px; height: auto;">
+  </div>
+ 
+    </div>
+
+    <div class="section">
+      <h2>Common Natural Ingredients</h2>
+      <ul>
+        <li><strong>Aloe Vera:</strong> Soothes and hydrates irritated skin.</li>
+        <li><strong>Shea Butter:</strong> Deeply moisturizes and heals dry skin.</li>
+        <li><strong>Rose Water:</strong> Balances pH and tones the skin.</li>
+        <li><strong>Turmeric:</strong> Reduces inflammation and brightens the skin.</li>
+        <li><strong>Lavender Oil:</strong> Calms and reduces acne-prone skin.</li>
+      </ul>   
+      <div style="display: flex; gap: 10px;">
+       <img src="swiaa.jpg" alt="Image 1" style="width: 300px; height: auto;">
+       <img src="ingredients_for_skin_health_and_benefits_600x600.webp" alt="Image 2" style="width: 300px; height: auto;">
+       <img src="brown.jpg" alt="Image 2" style="width: 300px; height: auto;">
+     </div>
+    </div>
+
+    <div class="section">
+      <h2>Sample DIY Face Mask Recipe</h2>
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tbsp honey</li>
+        <li>2 tbsp yogurt or rose water</li>
+      </ul>
+      <p><strong>Instructions:</strong> Mix all ingredients into a paste. Apply evenly to the face. Leave on for 15 minutes, then rinse with warm water.</p>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="quiz">
+      <h2>Quiz: Test Your Knowledge</h2>
+      <form id="quizForm">
+        <p>1. Which ingredient is best for calming irritated skin?</p>
+        <label><input type="radio" name="q1" value="a"> Charcoal</label><br>
+        <label><input type="radio" name="q1" value="b"> Aloe Vera</label><br><br>
+
+        <p>2. What does turmeric help with in skincare?</p>
+        <label><input type="radio" name="q2" value="a"> Inflammation & brightness</label><br>
+        <label><input type="radio" name="q2" value="b"> Moisturizing</label><br><br>
+
+        <p>3. What is the base ingredient in most natural creams?</p>
+        <label><input type="radio" name="q3" value="a"> Petroleum jelly</label><br><label><input type="radio" name="q3" value="b"> Shea Butter</label><br><br>
+
+        <button type="submit">Submit Quiz</button>  <a href="8.html" style="margin-top: 10px; padding: 8px 15px;background: #003300;color: white; border: none; border-radius: 4px;cursor: pointer;">Continue >>>></a>
+      </form>
+      <div id="result" class="result"></div>
+    </div>
+  </div>
+
+<script>
+  document.getElementById('quizForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const answers = { q1: 'b', q2: 'a', q3: 'b' };
+    let score = 0;
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    localStorage.setItem('skincareQuizScore', score);
+    document.getElementById('result').textContent = `You scored ${score}/3`;
+  });
+</script>
+
+
+</body>
+</html>

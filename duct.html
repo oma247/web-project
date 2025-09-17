@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introduction to Herbal Medicine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background: #f5fff5;
+    }
+     h2 {
+      color:  #006644;
+    }
+    .lesson {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .quiz {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .quiz button {
+      padding: 10px 20px;
+      background: #006644;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .quiz button:hover {
+      background: #1b5e20;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+        header {
+      background: #006644;
+      color: #fff;
+      padding: 35px;
+      text-align: center;
+       }
+ .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+  </style>
+</head>
+<body>
+
+  <header> <h1>Introduction to Herbal Medicine </h1></header><br>
+
+  <div class="lesson">
+    <h2>Lesson Overview</h2>
+    <p>Herbal medicine is the practice of using natural plant extracts to promote health and treat illness. 
+      It has been used for thousands of years and remains a vital part of traditional and alternative medicine worldwide.
+    </p>
+    <p>
+      Herbs like ginger, turmeric, garlic, and chamomile are commonly used for their healing properties. 
+      Herbal medicine focuses on the root cause of symptoms and supports the body’s natural ability to heal.
+    </p>
+    <p>
+      Safety and dosage are crucial when using herbal treatments. While they are natural, they must be used correctly.
+    </p>
+  </div>
+
+  <div class="quiz">
+    <h2>Quick Quiz</h2>
+    <p>1. What is herbal medicine primarily made from?</p>
+    <label><input type="radio" name="q1" value="a"> Chemicals</label><br/>
+    <label><input type="radio" name="q1" value="b"> Plants</label><br/>
+    <label><input type="radio" name="q1" value="c"> Synthetic drugs</label><br/>
+
+    <p>2. Which herb is commonly used to relieve nausea?</p>
+    <label><input type="radio" name="q2" value="a"> Lavender</label><br/>
+    <label><input type="radio" name="q2" value="b"> Ginger</label><br/>
+    <label><input type="radio" name="q2" value="c"> Mint</label><br/>
+
+    <button onclick="checkQuiz()">Submit Quiz</button><div class="result" id="result"></div> <br><br>
+     <a href="2comp.html" style="margin-top: 10px; padding: 8px 15px;background: #003300;color: white; border: none; border-radius: 4px;cursor: pointer;">Continue >>>></a>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      let score = 0;
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+
+      if (q1 && q1.value === "b") score++;
+      if (q2 && q2.value === "b") score++;
+
+          document.getElementById("result").textContent = `You got ${score}/2 correct.`;
+    }
+  </script>
+  <a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
+</body>
+</html>

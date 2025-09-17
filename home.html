@@ -11,13 +11,39 @@
 
 
      
-<!-- <script>
+<script>
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("show");
   }
-</script>   -->
+</script>  
 </head>
 <body>
+  <body>
+  <div class="profile-container">
+    <div class="hamburger" onclick="toggleUserMenu()">☰</div>
+    <div class="user-menu" id="userMenu">
+      <div id="bookingInfo"></div>
+      <h2>Welcome,</h2>
+      <h4 id="userNameDisplay"></h4>
+      <h4 id="userEmailDisplay"></h4>
+     <a href="courses.html">View My Courses</a><br>
+      <a href="#">Bookings</a><br>
+      <a href="faq.html">FAQs</a><br>
+      <a href="index.html">Logout</a><br>
+    </div>
+  </div>
+
+  <script>
+    function toggleUserMenu() {
+      const menu = document.getElementById('userMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Load user info
+    document.getElementById("userNameDisplay").textContent =  localStorage.getItem("userName");
+    document.getElementById("userEmailDisplay").textContent =  localStorage.getItem("userEmail");
+  </script>
+
 <header class="navbar">
 
   <!-- Hidden checkbox toggle -->
@@ -33,10 +59,10 @@
     <li><a href="about.html" target="_blank">ABOUT US</a></li><br>
     <li><a href="our servicess.html" target="_blank">OUR SERVICES</a></li><br>
     <li><a href="contact.html" target="_blank">CONTACT US</a></li><br>
-    <li><a href="contact.html" target="_blank">BELL'S INSTITUTE</a></li><br>
-    <li><a href="contact.html" target="_blank">CONTACT US</a></li><br>
+    <li><a href="team.html" target="_blank">JOIN US</a>
     </ul>
-  </div>
+
+
 </header>
  
 
@@ -58,13 +84,18 @@
       <p style="font-size: larger;">At Bellwether, we are dedicated to reconnecting people with the natural healing power of herbs. Our clinic provides personalized, holistic care using time-tested herbal remedies that supports wellness from inside out.  <br><br> Through our training programs, we equip individuals with the knowledge and skills to understand, practice and preserve the art natural medicine. From iridology and herbal consultations to fertility treatments and stress relief therapies, we offer a wide range of alternative medicine services designed to address the root cause of illness — not just the symptoms. <br><br>Thank you for choosing Bellwether Naturecure Clinic. We are more than a clinic — we are a sanctuary of wellness, a learning space for natural health, and a growing community that believes in the healing power of herbs and holistic care. We welcome you with open arms and invite you to begin your healing journey with us today.
 </p><br><br><br>
 
-  <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Eplore.Learn.Heal.Naturally</h3>
+  <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Explore.Learn.Heal Naturally</h3>
 
     </section>
   </main>
 
-  
+  <div class="profile-container">
+    <div class="hamburger" onclick="toggleUserMenu()">&#9776;</div>
+  </div>
 
+
+
+  
 
 
        
@@ -105,7 +136,13 @@
     <!-- <p style="font-size:xx-large; font-weight: 800; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;"><b>BELLWETHER NATURE CURE CLINIC<sup>&copy;</sup></br> -->
 
     <!-- <p style=" font-weight: 800; font-family: Verdana, Geneva, Tahoma, sans-serif;  color: rgb(0, 0, 0); ">IS YOUR HEALTH CONDITION A MEDICAL REJECT?<br style="font-family: fantasy;"><em style="color: rgb(0, 0, 0); ">THEN THIS IS FOR YOU!!!!!!!!!!</em></p> -->
-  
+
+<a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
+
+
+
 </body>
 </html>
 

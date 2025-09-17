@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Herbal Workshop Enrollment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .enrollment-form {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .enrollment-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .enrollment-form input,
+    .enrollment-form select,
+    .enrollment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .enrollment-form button {
+      width: 100%;
+      background: green;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .enrollment-form button:hover {
+      background: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+<div class="enrollment-form">
+  <h2>Enroll in Herbal Workshop</h2>
+  <form id="workshopForm">
+    <input type="text" name="fullname" placeholder="Full Name" required /><input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    
+    <select name="course" required>
+      <option value="">Select a Workshop</option>
+      <option value="Herbal Medicine 101">Herbal Medicine 101</option>
+      <option value="Detox & Cleansing">Detox & Cleansing</option>
+      <option value="Remedies for Ailments">Remedies for Ailments</option>
+    </select>
+
+    <textarea name="message" placeholder="Any comments or expectations?"></textarea>
+
+    <button type="submit">Enroll Now</button>
+  </form>
+</div>
+
+
+
+<script>
+  document.getElementById('workshopForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Redirect to courses page
+    window.location.href = "courses.html";
+  });
+</script>
+
+
+</body>
+</html>

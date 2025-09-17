@@ -6,7 +6,38 @@
     <title>Iridology | Bellwether Nature Cure Clinic</title>
 </head>
 <body>
-   
+   <style>
+    /* Navbar container */
+    .navbar {
+      background-color: #0b3202;
+      overflow: hidden;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our servicess.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
   <style>
     * {
       margin: 0;
@@ -93,6 +124,21 @@
   background-color: #0b3507;
 
 }
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
   </style>
 </head>
 <body>
@@ -104,10 +150,11 @@
 
   <div class="container">
     <h2>What is Iridology?</h2>
-    <p>Iridology is a natural, non-invasive diagnostic technique that involves examining the patterns, colors, and structures of the iris—the colored part of the eye. Practitioners believe that specific zones of the iris correspond to different organs and systems of the body.</p>
+    <p>Iridology is a natural, non-invasive diagnostic technique that involves examining the patterns, colors, and structures of the iris—the colored part of the eye. Research studies have shown that specific zones of the iris correspond to different organs and systems of the body.</p>
 
     <h2>How it Works</h2>
     <p>Through careful observation of the iris, practitioners may detect signs of inflammation, toxicity, and weakened organs—sometimes even before symptoms manifest. These findings can then guide holistic treatment plans tailored to your wellness goals.</p>
+    <!-- <img src="44-Looking-into-the-Eyes-.jpg" alt="iris"> -->
 
     <h2>Benefits of Iridology</h2>
     <ul>
@@ -125,6 +172,8 @@
     &copy; 2025 Bellwether Nature Cure Clinic | Rooted in Nature, Guided by Knowledge
   </footer>
 
-
+  <a href="https://wa.me/2349121322728" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <img src="icon.png" alt="WhatsApp" />
+</a>
 </body>
 </html>
