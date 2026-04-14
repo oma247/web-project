@@ -340,6 +340,7 @@ background-color: #e0f2e9;
   background-color: #619643; /* Your navbar color */
   /* padding: 10px 20px; */
   z-index: 1000;
+  
 }
 
 
@@ -476,5 +477,24 @@ background-color: #e0f2e9;
 }
 
 
+.heroine {
+  position: relative; /* allows absolute positioning of logo inside */
+  background-image: url("Blue\ Banner.png");
+  background-size: cover;
+  background-position: center;
+  height: 700px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;   /* adjust vertical placement */
+  left: 20px;  /* adjust horizontal placement */
+  width: 250px; /* control size of logo */
+  height: 200px;
+}
 
       
